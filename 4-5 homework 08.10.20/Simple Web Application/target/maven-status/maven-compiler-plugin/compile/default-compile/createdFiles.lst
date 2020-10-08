@@ -1,0 +1,7 @@
+ru\itis\models\User.class
+ru\itis\bd\DB.class
+ru\itis\repositories\UsersRepositoryImpl.class
+ru\itis\repositories\UsersRepository.class
+ru\itis\servlets\Registration.class
+ru\itis\servlets\UsersServlet.class
+ru\itis\repositories\CrudRepository.class
