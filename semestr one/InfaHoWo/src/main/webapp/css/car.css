@@ -1,0 +1,14 @@
+body {
+    grid-template-areas:
+        "header"
+        "carContent"
+        "footer";
+    grid-template-rows: 80px 100vh 1fr;
+}
+
+#carContent {
+    display: grid;
+    justify-items: center;
+    padding: 10px 50px;
+    margin-top: 80px;
+}
