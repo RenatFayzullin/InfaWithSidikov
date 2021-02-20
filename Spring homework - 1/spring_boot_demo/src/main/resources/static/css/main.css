@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 80px 300px 50px 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "subheader"
+        "filters"
+        "content"
+        "footer"
+        ;
+    font: 1em "Trebuchet MS";
+}
+
+header {
+    display: grid;
+    grid-area: header;
+    position: fixed;
+    background: #fff;
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+    grid-template-columns: 120px 1fr;
+}
+
+header img {
+    justify-self: center;
+}
+
+header ul {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    grid-template-columns: repeat(3, min-content) auto;
+}
+
+header ul a {
+    display: block;
+    padding: 0 20px;
+}
+
+header ul li {
+    height: 100%;
+    padding: 0 20px;
+    line-height: 80px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+header ul li:hover {
+    background: lightgray;
+}
+
+header ul li:last-child {
+    justify-self: end;
+}
+
+#subheader {
+    display: grid;
+    grid-area: subheader;
+    grid-template-columns: 1fr 1fr;
+    background: #66B9F9;
+    align-items: center;
+    justify-items: center;
+}
+#siteDesc {
+    padding-left: 30px;
+}
+#siteDesc p {
+    padding-left: 10px;
+    color: dimgrey;
+    font-size: .9em;
+}
+
+#search {
+    display: grid;
+    grid-area: filters;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+#filters button {
+    background: transparent;
+    border: 1px solid darkgrey;
+    border-radius: 10px;
+    padding: 0 20px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+#filters button:hover {
+    background: #e9e9e9;
+}
+
+#content {
+    display: grid;
+    grid-area: content;
+}
+
+#content ul {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 320px);
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+#content ul li {
+    height: 330px;
+    cursor: pointer;
+    display: grid;
+    text-decoration: none;
+}
+
+#content ul li * {
+    padding: 0;
+    margin: 0;
+}
+
+.car {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+#content ul li div h2 {
+    padding: 20px 30px;
+}
+
+.modelHight {
+    opacity: 0;
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    background: linear-gradient(transparent, #000);
+    bottom: 0;
+    transition: all .3s;
+}
+.modelBottom {
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    column-gap: 10px;
+    padding: 0 10px !important;
+    align-self: center;
+}
+.modelBottom {
+    color: #000;
+}
+
+#content ul li:hover > .car > .modelHight {
+    opacity: 1;
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+}

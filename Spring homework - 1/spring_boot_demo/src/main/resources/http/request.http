@@ -1,0 +1,5 @@
+GET localhost:8081/users/6
+
+###
+
+GET localhost:8081/users

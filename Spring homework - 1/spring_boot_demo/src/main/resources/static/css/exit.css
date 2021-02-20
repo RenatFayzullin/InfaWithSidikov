@@ -1,0 +1,29 @@
+#exitContent {
+    margin-top: 80px;
+    display: grid;
+    justify-items: center;
+}
+#exitContent form {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+    gap: 10px;
+}
+
+#exitContent form input {
+    padding: 10px 20px;
+    border-radius: 7px;
+    outline: none;
+}
+
+#exitContent form input[type="submit"] {
+    background: #66B9F9;
+    color: #fff;
+    font-weight: bold;
+    opacity: .8;
+    cursor: pointer;
+}
+
+#exitContent form input[type="submit"]:hover {
+    opacity: 1;
+}
